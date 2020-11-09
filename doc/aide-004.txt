@@ -1,0 +1,40 @@
+*aide-004.txt*
+
+Recuperer les fichiers perdus/supprimés sur disk ~
+
+========================================
+
+On regarde si notre cle est reconnue ~
+	$ sudo fdisk -l
+
+	- si on la reconnait pas on enleve la cle, retape la cmd et on compare
+
+========================================
+
+On analyse notre clé ~
+	$ testdisk
+
+	- on creer un log file
+	- on chosit la partition Intel si on sait pas
+	- on fait une analyse rapide
+	- on quitte parce qu'on a rien trouvé
+
+========================================
+
+On lance photorec ~
+	$ photorec
+
+	- on choisit notre disk 
+	- on fait search
+	- on choisit le type de partition
+	- on creer un fichier "backup" par exemple sur le Bureau pour recuperer les fichiers
+	- une fois le fichier créé et selectionné on appui sur C pour confirmer le choix
+	- on peut quitter une fois l'analyse terminée et les fichiers récupérés
+
+========================================
+
+On ouvre un terminal pour changer les permissions du fichier de backup ~
+	$ sudo chown -R jean ~/Bureau/backup/*
+		- -R pour recursif
+		- jean = user, pour add les droits a l'user
+		- et le chemin du fi

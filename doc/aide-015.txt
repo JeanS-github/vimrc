@@ -1,0 +1,41 @@
+*aide-015.txt*
+
+Créer une clé USB bootable avec un fichier .iso en ligne de commande
+
+|015.1| Connaitre le nom (partition) de la clé USB
+|015.2| Démonter toutes les partitions de la clé USB
+|015.3| Flasher l'image iso sur la clé USB 
+
+================================================================================
+*015.1* Connaitre le nom (partition) de la clé USB
+
+Pour un périphérique branché en usb
+
+$ lsblk -S
+
+sinon on identifie plus précisement (par exemple en fonction de la taille de la clé usb) avec :
+
+$ sudo fdisk -l
+
+================================================================================
+*015.2* Démonter toutes les partitions de la clé USB
+
+$ umount /dev/sdXY
+
+# Remplacer uniquement le X par la lettre correspondante à la partition de la clé usb
+# Remplacer le Y par la partition à modifier
+
+================================================================================
+*015.3* Flasher l'image iso sur la clé USB 
+
+$ sudo dd if=/chemin/vers/image.iso of=/dev/sdX bs=4M status=progress && \sync
+    
+    - dd = commande pour copier un dique
+    - if=/chemin/vers/image.iso = à changer avec le chemin du fichier iso
+    - of=/dev/sdX = à changer avec le nom de la clé usb correspondante
+    - bs=4M = taille des blocks
+    - status=progress = permet d’avoir l’indication de progression de l’opération
+    - && \sync = pour forcer les buffers à finir de se vider sur la clé 
+# \sync ou "sync" pour utliser la commande sync en ignorant l'alias du même nom
+
+Et terminer en déconnectant puis reconnectant la clé usb

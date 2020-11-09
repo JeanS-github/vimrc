@@ -1,0 +1,5 @@
+*aide-005.txt*
+
+Comparer des fichiers ou contenu de dossiers entre eux
+
+$ meld chemin/vers/fichier-ou-dossier chemin/vers/ficher-a-comparer

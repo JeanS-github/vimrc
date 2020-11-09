@@ -1,0 +1,24 @@
+*aide-001.txt*
+
+Package recently added
+
+|001.1| 1st method aptitude
+|001.2| 2nd method aptitude
+|001.3| snap method
+
+==============================================================================
+*001.1* 1st method aptitude
+
+$ grep "install" /var/log/dpkg.log
+
+==============================================================================
+*001.2* 2nd method aptitude
+
+$ dpkg --get-selections
+
+==============================================================================
+*001.3* snap method
+
+$ snap list
+
+

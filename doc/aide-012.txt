@@ -1,0 +1,12 @@
+*aide-012.txt*
+
+Partage d'écran vers un moniteur externe en HDMI
+
+|012.1| Commande
+
+================================================================================
+*O12.1* Commande
+
+$ pavucontrol
+
+=> 'Configuration' => 'Profil' => 'Hdmi' 

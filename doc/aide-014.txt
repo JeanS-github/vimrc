@@ -1,0 +1,50 @@
+*aide-014.txt*
+
+Création d'un serveur qui permet le téléchargement d'un ou plusieurs fichiers d'un pc (host) sur un autre appareil (guest), sur le même réseau (local).
+Le guest ne peut pas uploader des fichiers vers l'host.
+La connection ne se fait que dans un sens (asynchrone).
+
+|014.1| Création du serveur via python
+|014.1| Création du serveur via Node.js
+|014.3| Connection au serveur via un autre appareil
+================================================================================
+*014.1* Création du serveur via python
+
+Récupération de l'adresse ip de la machine HOST ~
+
+$ ifconfig (ou avec l'alias myip)
+
+# on note l'adresse pour que les GUESTS puissent s'y connecter
+
+Création du serveur python ~
+
+$ python -m http.server [port]
+
+# -m : pour utiliser un module
+# si on pip install httpserver
+
+# par défaut le port est 8000
+
+================================================================================
+*014.1* Création du serveur via Node.js
+
+$ http-server [path] [options]
+
+Options are [defaults]:
+
+    -p The port number to listen on [8080]
+    -a The host address to bind to [localhost]
+    -i Display directory index pages [True]
+    -s or --silent Silent mode won't log to the console
+    -h or --help Displays help message and exits
+
+So to serve the current directory on port 8000, type:
+
+$ http-server -p 8000
+
+================================================================================
+*014.2* Connection au serveur via un autre appareil
+
+Sur un autre pc (ou autre) connecté au même réseau wifi que l'HOST, allez sur un navigateur internet et tapez :
+
+<adresse ip de HOST>:<port>/[filename]

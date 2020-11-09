@@ -1,0 +1,11 @@
+*aide-007.txt*
+
+Obtenir PID d'une fénêtre en cliquant dessus
+
+|001.1| Commande
+
+==============================================================================
+*001.1* Commande
+
+$ xprop | grep PID
+

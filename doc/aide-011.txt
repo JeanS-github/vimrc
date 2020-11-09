@@ -1,0 +1,19 @@
+*aide-011.txt*
+
+Redémarrer son interface graphique sans éteindre son pc
+
+|001.1| Connaitre son interface graphique
+|001.2| Redémarrer son interface graphique
+
+================================================================================
+*011.1* Connaitre son interface graphique
+
+$ cat /etc/X11/default-display-manager
+
+ici : renvoie .../lightdm
+================================================================================
+*010.2* Redémarrer son interface graphique
+
+$ sudo restart lightdm
+
+# quand il y a un écran noir par exemple 

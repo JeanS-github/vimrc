@@ -1,0 +1,31 @@
+*aide-002.txt*
+
+Afficher des images, ouvrir/modifier des pdf, lire des vidéos
+
+|002.1| Les images
+|002.2| Les vidéos
+|002.3| Les pdf
+
+==============================================================================
+*002.1* Les images
+
+$ eog image.jpg
+
+$ ristretto image.png
+
+==============================================================================
+*002.2* Les videos
+
+$ vlc video.avi
+
+$ totem video.mp4
+
+==============================================================================
+*002.3* Les pdf
+
+$ evince fichier.pdf
+
+Pour modifier : 
+$ masterpdfeditor4 fichier.pdf
+
+

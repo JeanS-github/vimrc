@@ -1,0 +1,67 @@
+*aide-003.txt*
+
+Comment compresser et dé-compresser des dossiers (zip, rar, tar, tgz, ...)
+
+|003.0| Performances
+|003.1| Créer et compresser un dossier
+|003.2| Dé-compresser un dossier
+
+==============================================================================
+*003.0* Performances des différentes méthodes de compressions et extractions
+
+Vitesse d’extraction (du + rapide au + lent) : gzip > xz > bzip2
+Vitesse de compression (du + rapide au + lent): gzip > bzip2 > xz
+Taux de compression (du meilleur au moins bon) : xz > bzip2 > gzip
+Compatibilité (Linux) : gzip > bzip2 > xz
+Compatibilité (Windows) : xz > gzip, bzip2
+
+==============================================================================
+*003.1* Créer et compresser un dossier
+
+Dossier en .tgz (ou tar.gz) : ~
+
+# tar permet d'archiver plusieurs fichiers en 1 seul
+# gzip/bzip2/xz/... permettent de compresser un ou plusieurs fichiers/dossiers
+
+Compression avec gzip ~
+
+# Pour compresser un repertoire ou 1 seul fichier 
+
+$ tar czvf nom-de-l-archive.tgz /chemin/vers/dossier-ou-fichier [on peut rajouter d'autres chemin vers des fichiers ou dossiers]
+
+#   -c : crée une archive
+#   -z : compresse l'archive avec GZIP
+#   -v : verbose
+#   -f : permet de spécifier le nom de l'archive
+
+Compresser avec xz ~
+
+$ tar -cJvf archive.tar.xz ~/Documents/
+
+Compresser avec bzip2 ~
+
+$ tar -cjvf archive.tar.bz2 ~/Documents/
+ou
+$ tar -cjvf archive.bz2 ~/Documents/
+
+BONUS ~
+
+Exclure des dossiers/fichiers ~
+
+Exemples :
+
+# sans le sous-dossier "Ubuntu" et les patterns type jpg
+
+$ tar -czvf archive.tar.gz ~/Images/Wallpapers --exclude=~/Images/Wallpapers/Ubuntu --exclude=*.jpg
+
+
+Dossier en .zip : ~
+
+$ zip dossier.zip dossierAcompresser/
+
+==============================================================================
+*003.2* Dé-compresser un dossier
+
+$ tar -xzvf archive.tar.gz
+
+# changer le "z" en fonction de la méthode de compression

@@ -1,0 +1,24 @@
+*aide-010.txt*
+
+Remplacer les espaces
+
+|001.1| De un ou plusieurs noms de fichier
+|001.2| Dans un fichier
+
+================================================================================
+*010.1* De un ou plusieurs noms de fichier
+
+Exemple de remplacement par des underscores :
+
+$for i in * ;
+do
+a=`echo $i | tr "[:blank:]" "_"`
+mv "$i" "$a"
+done 
+
+================================================================================
+*010.2* Dans un fichier
+
+Remplacer tous les espaces dans un fichier par ce que l'on veut (ici vide) :
+
+$ sed -i 's/ //g' fichier

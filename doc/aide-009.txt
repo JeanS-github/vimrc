@@ -1,0 +1,16 @@
+*aide-009.txt*
+
+Changer de clavier (us <-> fr)
+
+|001.1| Commande
+
+==============================================================================
+*001.1* Commande
+
+Sous Xorg (dans une session graphique, session en cours) ~
+
+$ setxkbmap fr
+
+En root ~ 
+
+$ loadkeys fr

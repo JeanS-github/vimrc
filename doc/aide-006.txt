@@ -1,0 +1,31 @@
+*aide-006.txt*
+
+Désactiver/activer l'écran tactile de l'ordinateur
+
+|001.1| Trouver l'écran de l'ordinateur
+|001.2| Désactiver/activer l'écran
+
+==============================================================================
+*001.1* Trouver l'écran de l'ordinateur
+
+$ xinput list
+
+Les écrans de chez DELL sont ELAN... 
+Ici sur mon DELL XPS 13 9380 c'est : ELAN2933:00 04F3:2933
+
+Pour vérifier si c'est bien l'écran on fait une recherche de ELAN...2933 sur internet 
+
+
+==============================================================================
+*001.2* Désactiver/activer l'écran
+
+Désactiver ~
+
+$ xinput disable XX
+    
+    - XX correspond à l'id de l'écran (ici 10)
+
+Activer ~
+
+$ xinput enable XX
+

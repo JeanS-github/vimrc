@@ -1,0 +1,33 @@
+*aide.txt*              Aide, astuces et raccourcis sous linux
+
+Dernière modification : Août 2020
+Pour appliquer les modifications : :helptags ~/.vim/doc
+
+                                AIDE - main help file 
+
+Pour ouvrir une aide : Ctrl+]
+Pour modifier une aide : Ctrl+J
+Pour revenir à l'écran précédent : Ctrl+T ou Ctrl+O
+
+Pour maximiser la fenêtre d'aide : Ctrl+W+o
+
+Liste non-exhaustive contenant des commandes, des raccourcis et tutoriaux pour les galères au quotidien sous linux
+-------------------------------------------------------------------------------
+                                                        *table-of-contents*
+Table des matières ~
+
+|aide-001.txt| Lister les paquets [récemment] installés
+|aide-002.txt| Afficher, lire, des médias et ouvrir et modifier des pdf
+|aide-003.txt| Compresser, décompresser
+|aide-004.txt| Récupérer données perdues sur un disque externe
+|aide-005.txt| Comparer des fichiers ou dossiers entre eux
+|aide-006.txt| Désactiver/activer écran tactile de l'ordinateur
+|aide-007.txt| Obtenir PID d'une fenêtre en cliquant dessus
+|aide-008.txt| Trouver code couleur sur l'écran
+|aide-009.txt| Changer la langue du clavier
+|aide-010.txt| Remplacer les espaces
+|aide-011.txt| Redémarrer l'interface graphique
+|aide-012.txt| Dupliquer écran vers autre un écran
+|aide-013.txt| LaTeX en temps réel
+|aide-014.txt| Serveur local pour transfert de fichier
+|aide-015.txt| Créer une clé USB bootable à partir d'un ISO

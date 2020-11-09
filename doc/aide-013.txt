@@ -1,0 +1,23 @@
+*aide-013.txt*
+
+Afficher en temps réel le pdf correspondant a un  fichier .tex
+
+|013.1| Affichage en temps réel
+|013.2| Supprimer les fichiers temporaires
+
+================================================================================
+*013.1* Affichage en temps réel
+
+$ latek fichier.tex
+
+# latek est un alias et correspond à :latexmk -pvc -pdf -shell-escape
+
+================================================================================
+*013.2* Supprimer les fichier temporaires
+
+On utilise le script clean.sh dans ~/bin
+
+$ clean.sh fichier
+
+# Sans extension
+
