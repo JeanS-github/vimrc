@@ -13,9 +13,8 @@ call vundle#begin()
 " On indique à Vundle de s'auto-gérer
 Plugin 'VundleVim/Vundle.vim'  
 
-
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call vundle#end()            " requiredmorhetz/gruvbox
 filetype plugin indent on    " required
 
 " auto pairs (),"",'',...
@@ -27,14 +26,19 @@ Plugin 'scrooloose/syntastic'
 
 " begin : snipmate
 Plugin 'garbas/vim-snipmate'
+let g:snipMate = { 'snippet_version' : 1 }
+" to avoid the f warning before launching vim
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 " end : snipmate
 
 Plugin 'loremipsum'
-" Plugin 'Royal-Colorschemes'
 " Plugin 'YouCompleteMe'
 
+" Colortheme
+" Plugin 'Royal-Colorschemes'
+Plugin 'tomasiser/vim-code-dark'
+Plugin 'morhetz/gruvbox'
 
 "============================== HOW TO ======================================
 " to install a plugin : git clone that plugin in 'bundle/' and  add it here and run :PluginInstall.
@@ -70,6 +74,7 @@ set wildmenu
 set wrap
 set linebreak
 set showmatch   "Highlight matching brace
+set guioptions-=r " Removes right hand scroll bar
 
 " -------------
 " | match < > |
@@ -109,6 +114,9 @@ set mouse=a
 " Display line numbers on the left
 set number
 
+" Count pattern found by a '/' search
+set shortmess-=S
+
 " Always show cursor position
 set ruler
 
@@ -130,7 +138,6 @@ set incsearch
 
 " pour l'édition LaTeX
 inoremap $$ $$$$<Esc>hi
-
 
 
 " ---- LaTeX ----
@@ -156,7 +163,16 @@ map sout<Tab> i<C-T>System.out.println("");<Esc>F"i
 
 
 " ==== Colorscheme =====
-" colorscheme default
+set t_Co=256
+set t_ut=
+colorscheme codedark
+
+
+"highlight Cursorline = green
+"let g:gruvbox_contrast_dark = 'hard'
+" colorscheme gruvbox
+
+
 
 " True Colors are a requirement for color scheme
 
@@ -173,9 +189,6 @@ endif
 " if (has('termguicolors'))
 "   set termguicolors
 " endif
-
-
-
 
 
 " ==== VIM STATUS BAR ====
@@ -197,7 +210,7 @@ set statusline+=%2*%{&modified?'[+]':''}
 set statusline+=%3*%{&readonly?'🔒':''}
 set statusline+=%<
 set statusline+=%=
-set statusline+=%4*%y\ 
+set statusline+=%4*[%Y]\ 
 set statusline+=%4*l:%l/%L\ \|\ c:%c\ 
 set statusline+=%4*\\|\ %p%%\ 
 
@@ -223,4 +236,12 @@ hi User4 guifg=#ffffff  guibg=#005FFF
 " %9* doesn't exist, it's just to avoid like a space in the chosen color
 
 " ==== END VIM STATUS BAR ====
+
+" Disable all blinking:
+set guicursor+=a:blinkon0
+
+
+" PYTHON auto indent
+set cindent
+autocmd FileType python setlocal foldmethod=indent smartindent shiftwidth=4 ts=4 et cinwords=if,elif,else,for,while,try,except,finally,def,class
 
