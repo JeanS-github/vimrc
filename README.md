@@ -24,6 +24,16 @@ wget -O ~/.vimrc https://raw.githubusercontent.com/JeanS-github/vimrc/main/vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 ```
+Installation of my personnal documentation
+
+```shell
+mkdir -p ~/.vim/doc
+wget -P ~/.vim/doc https://raw.githubusercontent.com/JeanS-github/vimrc/main/doc/aide-0{01..15}.txt https://raw.githubusercontent.com/JeanS-github/vimrc/main/doc/aide.txt
+```
+
+then launch vim and type `:helptags ~/.vim/doc`.
+
+To see my documentation, just type (in vim) `:help aide.txt`.
 
 ### Plugins
 
