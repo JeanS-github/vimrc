@@ -9,7 +9,7 @@ Pour ouvrir une aide : Ctrl+]
 Pour modifier une aide : Ctrl+J
 Pour revenir à l'écran précédent : Ctrl+T ou Ctrl+O
 
-Pour maximiser la fenêtre d'aide : Ctrl+W+o
+Pour maximiser la fenêtre d'aide : Ctrl+w+o
 
 Liste non-exhaustive contenant des commandes, des raccourcis et tutoriaux pour les galères au quotidien sous linux
 -------------------------------------------------------------------------------

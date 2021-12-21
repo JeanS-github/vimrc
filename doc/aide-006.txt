@@ -2,11 +2,11 @@
 
 Désactiver/activer l'écran tactile de l'ordinateur
 
-|001.1| Trouver l'écran de l'ordinateur
-|001.2| Désactiver/activer l'écran
+|006.1| Trouver l'écran de l'ordinateur
+|006.2| Désactiver/activer l'écran
 
 ==============================================================================
-*001.1* Trouver l'écran de l'ordinateur
+*006.1* Trouver l'écran de l'ordinateur
 
 $ xinput list
 
@@ -17,7 +17,7 @@ Pour vérifier si c'est bien l'écran on fait une recherche de ELAN...2933 sur i
 
 
 ==============================================================================
-*001.2* Désactiver/activer l'écran
+*006.2* Désactiver/activer l'écran
 
 Désactiver ~
 

@@ -5,7 +5,7 @@ Le guest ne peut pas uploader des fichiers vers l'host.
 La connection ne se fait que dans un sens (asynchrone).
 
 |014.1| Création du serveur via python
-|014.1| Création du serveur via Node.js
+|014.2| Création du serveur via Node.js
 |014.3| Connection au serveur via un autre appareil
 ================================================================================
 *014.1* Création du serveur via python
@@ -26,7 +26,7 @@ $ python -m http.server [port]
 # par défaut le port est 8000
 
 ================================================================================
-*014.1* Création du serveur via Node.js
+*014.2* Création du serveur via Node.js
 
 $ http-server [path] [options]
 
@@ -43,7 +43,7 @@ So to serve the current directory on port 8000, type:
 $ http-server -p 8000
 
 ================================================================================
-*014.2* Connection au serveur via un autre appareil
+*014.3* Connection au serveur via un autre appareil
 
 Sur un autre pc (ou autre) connecté au même réseau wifi que l'HOST, allez sur un navigateur internet et tapez :
 

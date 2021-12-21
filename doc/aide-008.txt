@@ -2,10 +2,10 @@
 
 Trouver le code couleur de n'importe quoi sur l'écran
 
-|001.1| Commande
+|008.1| Commande
 
 ==============================================================================
-*001.1* Commande
+*008.1* Commande
 
 $ gcolor2
 
